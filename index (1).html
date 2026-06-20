@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pugal — Python Developer &amp; AI Enthusiast</title>
+<meta name="description" content="Pugal — Python Developer, AI Enthusiast and B.Tech IT student building intelligent software solutions.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader-terminal">
+    <span class="loader-prompt">&gt;&gt;&gt; </span><span class="loader-text" id="loaderText"></span><span class="cursor-blink">_</span>
+  </div>
+</div>
+
+<!-- Custom cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Navigation -->
+<header class="navbar" id="navbar">
+  <nav class="nav-container">
+    <a href="#home" class="logo"><span class="logo-bracket">&lt;</span>Pugal<span class="logo-bracket">/&gt;</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">home</a></li>
+      <li><a href="#about" class="nav-link">about</a></li>
+      <li><a href="#skills" class="nav-link">skills</a></li>
+      <li><a href="#projects" class="nav-link">projects</a></li>
+      <li><a href="#education" class="nav-link">education</a></li>
+      <li><a href="#achievements" class="nav-link">achievements</a></li>
+      <li><a href="#contact" class="nav-link">contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-blue"></div>
+      <div class="glow glow-purple"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-text reveal">
+        <p class="hero-eyebrow"><span class="dot"></span> open to opportunities</p>
+        <h1 class="hero-name">Pugal</h1>
+        <h2 class="hero-role">
+          <span id="typedRole"></span><span class="type-cursor">|</span>
+        </h2>
+        <p class="hero-desc">
+          Passionate Python Developer and Information Technology student focused on
+          building AI-powered solutions, intelligent systems, and impactful software applications.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span><i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Contact Me</span>
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:pugal@example.com" aria-label="Email" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+            <span class="terminal-title">profile.py</span>
+          </div>
+          <div class="terminal-body">
+            <pre><code><span class="tk-kw">class</span> <span class="tk-cls">Developer</span>:
+    <span class="tk-kw">def</span> <span class="tk-fn">__init__</span>(<span class="tk-self">self</span>):
+        <span class="tk-self">self</span>.name = <span class="tk-str">"Pugal"</span>
+        <span class="tk-self">self</span>.role = <span class="tk-str">"Python Developer"</span>
+        <span class="tk-self">self</span>.education = <span class="tk-str">"B.Tech IT, 2nd Year"</span>
+        <span class="tk-self">self</span>.focus = [
+            <span class="tk-str">"AI"</span>, <span class="tk-str">"ML"</span>,
+            <span class="tk-str">"Software Engineering"</span>
+        ]
+        <span class="tk-self">self</span>.status = <span class="tk-str">"building..."</span>
+
+<span class="tk-comment"># &gt;&gt;&gt; me = Developer()</span>
+<span class="tk-out">Profile loaded successfully ✓</span><span class="term-caret">_</span></code></pre>
+          </div>
+        </div>
+
+        <div class="profile-badge">
+          <div class="profile-img-placeholder">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+      <span>scroll</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <p class="section-eyebrow reveal">about</p>
+      <h2 class="section-title reveal">Who I am</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm currently pursuing my <strong>Bachelor of Technology in Information Technology</strong>,
+            and I'm in my <strong>second year</strong>. Somewhere between debugging late-night Python
+            scripts and reading about the latest in machine learning, I found the kind of work that
+            doesn't feel like work.
+          </p>
+          <p>
+            My interests sit at the intersection of <strong>Python development</strong>,
+            <strong> Artificial Intelligence</strong>, <strong>Machine Learning</strong>, and
+            <strong> Software Engineering</strong>. I like taking a hard, slightly fuzzy problem and
+            turning it into clean, working code — then making it a little better the next day.
+          </p>
+          <p>
+            I'm still early in this journey, and that's exactly why I'm pushing to learn fast:
+            new frameworks, new patterns, new ways to think about systems — one project at a time.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number" data-target="2">0</span><span class="stat-suffix">nd</span>
+              <p>Year B.Tech IT</p>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="4">0</span><span class="stat-suffix">+</span>
+              <p>Languages Learned</p>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="2">0</span><span class="stat-suffix">+</span>
+              <p>AI Projects Built</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual reveal">
+          <div class="glass-card code-card">
+            <div class="code-card-line"><span class="tk-kw">while</span> learning:</div>
+            <div class="code-card-line indent">build_project()</div>
+            <div class="code-card-line indent">read_docs()</div>
+            <div class="code-card-line indent">improve_skills()</div>
+            <div class="code-card-line"><span class="tk-comment"># never stop()</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <p class="section-eyebrow reveal">capabilities</p>
+      <h2 class="section-title reveal">Skills &amp; Tools</h2>
+
+      <h3 class="skills-subhead reveal">Programming Languages</h3>
+      <div class="skills-grid reveal">
+        <div class="skill-card">
+          <i class="fa-brands fa-python"></i>
+          <h4>Python</h4>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-code"></i>
+          <h4>C++</h4>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-c"></i>
+          <h4>C</h4>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-java"></i>
+          <h4>Java</h4>
+        </div>
+      </div>
+
+      <h3 class="skills-subhead reveal">Technical Skills</h3>
+      <div class="skills-grid skills-grid--wide reveal">
+        <div class="skill-card">
+          <i class="fa-solid fa-brain"></i>
+          <h4>Artificial Intelligence</h4>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-robot"></i>
+          <h4>Machine Learning</h4>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h4>Software Development</h4>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-puzzle-piece"></i>
+          <h4>Problem Solving</h4>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h4>Data Analysis</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <p class="section-eyebrow reveal">selected work</p>
+      <h2 class="section-title reveal">Projects</h2>
+
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-image">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <div class="project-body">
+            <h3>AI-Based Server Failure Prediction System</h3>
+            <p>
+              An intelligent system that analyzes system logs and predicts server failures using
+              AI techniques — helping organizations reduce downtime, improve reliability, and catch
+              potential failures before they happen.
+            </p>
+            <div class="tech-tags">
+              <span>Python</span><span>Artificial Intelligence</span><span>Machine Learning</span><span>Data Analysis</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-image">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="project-body">
+            <h3>AI-Based Role-Based Identity Access Management System</h3>
+            <p>
+              An AI-powered identity and access management solution that automates user role
+              assignment and access control decisions — enhancing security and cutting down manual
+              effort across an organization.
+            </p>
+            <div class="tech-tags">
+              <span>Python</span><span>Artificial Intelligence</span><span>Access Control</span><span>Security Systems</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="education" id="education">
+    <div class="container">
+      <p class="section-eyebrow reveal">background</p>
+      <h2 class="section-title reveal">Education</h2>
+
+      <div class="timeline reveal">
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-tag">currently studying</span>
+            <h3>Bachelor of Technology (B.Tech)</h3>
+            <p class="timeline-meta">Information Technology · 2nd Year Student</p>
+            <p>
+              Building a strong foundation in core computer science and IT concepts while
+              specializing independently in Python, AI, and Machine Learning through hands-on
+              projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="achievements" id="achievements">
+    <div class="container">
+      <p class="section-eyebrow reveal">milestones</p>
+      <h2 class="section-title reveal">Achievements</h2>
+
+      <div class="achievements-grid">
+        <div class="achievement-card reveal">
+          <i class="fa-solid fa-microchip"></i>
+          <h3>AI-Based Software Projects</h3>
+          <p>Designed and developed real-world AI-driven systems from concept to working prototype.</p>
+        </div>
+        <div class="achievement-card reveal">
+          <i class="fa-solid fa-code-branch"></i>
+          <h3>Strong Programming Foundation</h3>
+          <p>Built solid fundamentals across Python, C++, C, and Java through consistent practice.</p>
+        </div>
+        <div class="achievement-card reveal">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h3>Active AI Learner</h3>
+          <p>Continuously exploring Artificial Intelligence and emerging technologies beyond the classroom.</p>
+        </div>
+        <div class="achievement-card reveal">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+          <h3>Continuous Improvement</h3>
+          <p>Steadily leveling up software development skills, one project and one bug at a time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <p class="section-eyebrow reveal">get in touch</p>
+      <h2 class="section-title reveal">Contact Me</h2>
+      <p class="contact-sub reveal">Have a project in mind, an opportunity, or just want to talk about AI? My inbox is open.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <a href="mailto:pugal@example.com" class="contact-info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span>Email</span>
+              <p>pugal@example.com</p>
+            </div>
+          </a>
+          <a href="https://github.com/" target="_blank" rel="noopener" class="contact-info-item">
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <span>GitHub</span>
+              <p>github.com/pugal</p>
+            </div>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-info-item">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <div>
+              <span>LinkedIn</span>
+              <p>linkedin.com/in/pugal</p>
+            </div>
+          </a>
+        </div>
+
+        <form class="contact-form glass-card reveal" id="contactForm">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-row">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me a bit more..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <span id="submitText">Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="logo"><span class="logo-bracket">&lt;</span>Pugal<span class="logo-bracket">/&gt;</span></a>
+      <p>Python Developer &amp; AI Enthusiast, building one project at a time.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:pugal@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Navigate</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Pugal. All Rights Reserved.</p>
+    <p>Designed and Developed by Pugal.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
